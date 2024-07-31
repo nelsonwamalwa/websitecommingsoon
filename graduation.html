@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambassadors Wellness Center - Coming Soon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+            .bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('gradparty.jpg'); /* Ensure this path is correct */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto; /* Changed from contain to cover */
+        z-index: -1;
+    }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 120px auto; /* Adjusted margin for top and bottom */
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .navbar-custom {
+            background-color: #0056b3; /* Distinct color for the navbar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+            color: white;
+        }
+
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .spacer {
+            height: 70px; /* Height of the navbar */
+        }
+
+        .footer-spacer {
+            height: 60px; /* Height of the footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Ambassadors Wellness Center Logo" style="max-height: 40px; margin-right: 10px;">
+                <span>Ambassadors Wellness Center </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="graduation.html">Daniel's Graduation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="services.html">Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="location.html">Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg"></div>
+
+    <!-- Spacer to account for fixed navbar -->
+    <div class="spacer"></div>
+
+    <div class="content">
+        <h1>Your Graduation Wishes </h1>
+  
+        <form>
+            <div class="form-group">
+                <textarea class="form-control" id="recommendation" rows="3" placeholder="Celebrate Daniel's graduation by leaving your best wishes and congratulatory messages!"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Your Wishes</button>
+        </form>
+    </div>
+
+    <!-- Spacer to account for fixed footer -->
+    <div class="footer-spacer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by <a href="https://4marcus.com" target="_blank">4Marcus</a></p>
+    </footer>
+</body>
+</html>

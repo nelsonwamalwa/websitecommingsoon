@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambassadors Wellness Center - Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: auto; /* Allow internal scroll */
+            flex-grow: 1;
+            display: none; /* Hide lists initially */
+        }
+
+        .card-body ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .card-body ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0056b3;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('graduationparty.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .card-body ul {
+                font-size: 1rem;
+            }
+        }
+
+        .navbar {
+            background-color: #0056b3;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+
+        h1 {
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        p {
+            color: #333;
+        }
+
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cardTitles = document.querySelectorAll(".card-title");
+            cardTitles.forEach(function(title) {
+                title.addEventListener("click", function() {
+                    var list = this.nextElementSibling;
+                    var currentlyVisibleList = document.querySelector(".card-body ul:not([style*='display: none'])");
+                    if (currentlyVisibleList && currentlyVisibleList !== list) {
+                        currentlyVisibleList.style.display = "none";
+                    }
+                    if (list.style.display === "none" || list.style.display === "") {
+                        list.style.display = "block";
+                    } else {
+                        list.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Ambassadors Wellness Center Logo" style="max-height: 40px; margin-right: 10px;">
+                <span>Ambassadors Wellness Center </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="graduation.html">Daniel's Graduation </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="location.html">Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1 class="text-center mb-4">Services Offered at Ambassadors Wellness Center</h1>
+      
+        <div class="container">
+            <!-- Clinical Assessments and Diagnosis -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Clinical Assessments and Diagnosis</h5>
+                    <ul>
+                        <li>Psychiatric Evaluations</li>
+                        <li>Psychological Testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Therapeutic Services -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Therapeutic Services</h5>
+                    <ul>
+                        <li>Individual Therapy</li>
+                        <li>Group Therapy</li>
+                        <li>Family Therapy</li>
+                        <li>Cognitive Behavioral Therapy (CBT)</li>
+                        <li>Dialectical Behavior Therapy (DBT)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Medication Management -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Medication Management</h5>
+                    <ul>
+                        <li>Psychopharmacology</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Crisis Intervention -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Crisis Intervention</h5>
+                    <ul>
+                        <li>Emergency Services</li>
+                        <li>Hotlines and Helplines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Inpatient and Residential Treatment -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Inpatient and Residential Treatment</h5>
+                    <ul>
+                        <li>Inpatient Care</li>
+                        <li>Residential Treatment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Outpatient Services -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Outpatient Services</h5>
+                    <ul>
+                        <li>Partial Hospitalization Programs (PHP)</li>
+                        <li>Intensive Outpatient Programs (IOP)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Specialized Programs -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Specialized Programs</h5>
+                    <ul>
+                        <li>Substance Abuse Treatment</li>
+                        <li>Eating Disorders Treatment</li>
+                        <li>Trauma-Informed Care</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Supportive Services -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Supportive Services</h5>
+                    <ul>
+                        <li>Case Management</li>
+                        <li>Peer Support</li>
+                        <li>Psychoeducation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rehabilitation and Skill-Building -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Rehabilitation and Skill-Building</h5>
+                    <ul>
+                        <li>Occupational Therapy</li>
+                        <li>Life Skills Training</li>
+                        <li>Vocational Rehabilitation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Research and Education -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Research and Education</h5>
+                    <ul>
+                        <li>Training Programs</li>
+                        <li>Workshops and Seminars</li>
+                        <li>Community Outreach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <div class="bg"></div>
+
+    <!-- Footer -->
+    <footer>
+        Powered by 4Marcus
+    </footer>
+</body>
+</html>
